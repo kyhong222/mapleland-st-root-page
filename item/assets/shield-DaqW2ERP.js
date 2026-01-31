@@ -1,1 +1,0 @@
-const t={1092042:{koreanName:"크로스헤이더",icon:"https://maplestory.io/api/gms/200/item/1092061/icon",stats:{attack:0,str:5,dex:0,int:0,luk:0,mad:0,pdef:80,mdef:30,acc:0,eva:0},requireStats:{level:100,str:310,dex:0,int:0,luk:0}}};export{t as default};
