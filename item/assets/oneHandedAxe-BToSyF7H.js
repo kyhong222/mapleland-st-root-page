@@ -1,0 +1,1 @@
+const e={1312032:{koreanName:"메이플 스틸 엑스",icon:"https://maplestory.io/api/GMS/200/item/1312032/icon",stats:{attack:81,str:1,dex:0,int:0,luk:0,mad:0,pdef:0,mdef:0,acc:25,eva:0,attackSpeed:6},requireStats:{level:64,str:0,dex:0,int:0,luk:0}}};export{e as default};
