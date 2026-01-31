@@ -7,12 +7,12 @@ export interface Tool {
 export const tools: Tool[] = [
   {
     title: '스킬 시뮬레이터',
-    description: '스킬 트리를 미리 계획하고 시뮬레이션',
+    description: '메이플랜드의 스킬을 미리 찍어볼 수 있습니다.',
     href: '/skill/',
   },
   {
-    title: '세팅 시뮬레이터',
-    description: '캐릭터 장비/스탯 세팅 시뮬레이션',
-    href: '/mapleland-setting/',
+    title: '템세팅 시뮬레이터',
+    description: '장비를 미리 착용해보고 스탯을 확인할 수 있습니다.',
+    href: '/item/',
   },
 ];
