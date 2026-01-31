@@ -11,7 +11,7 @@ export const tools: Tool[] = [
     href: '/skill/',
   },
   {
-    title: '템세팅 시뮬레이터',
+    title: '템세팅 시뮬레이터(beta)',
     description: '장비를 미리 착용해보고 스탯을 확인할 수 있습니다.',
     href: '/item/',
   },
