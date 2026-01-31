@@ -1,0 +1,78 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  repository_dispatch:
+    types: [deploy-trigger]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout root repo
+        uses: actions/checkout@v4
+        with:
+          path: root
+
+      - name: Checkout skill simulator
+        uses: actions/checkout@v4
+        with:
+          repository: kyhong222/ms-skill-simulator
+          path: skill
+
+      - name: Checkout item simulator
+        uses: actions/checkout@v4
+        with:
+          repository: kyhong222/mapleland-setting
+          path: item
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # Build root page
+      - name: Build root
+        working-directory: root
+        run: |
+          npm ci
+          npm run build
+
+      # Build skill simulator with base path
+      - name: Build skill
+        working-directory: skill
+        run: |
+          npm ci
+          npm run build -- --base=/skill/
+        env:
+          VITE_BASE_PATH: /skill/
+
+      # Build item simulator with base path
+      - name: Build item
+        working-directory: item
+        run: |
+          npm ci
+          npm run build -- --base=/item/
+        env:
+          VITE_BASE_PATH: /item/
+
+      # Combine all builds
+      - name: Combine builds
+        run: |
+          mkdir -p dist
+          cp -r root/dist/* dist/
+          mkdir -p dist/skill
+          cp -r skill/dist/* dist/skill/
+          mkdir -p dist/item
+          cp -r item/dist/* dist/item/
+
+      # Deploy to GitHub Pages
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          cname: mapleland.st
