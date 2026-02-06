@@ -1,1 +1,0 @@
-const t={1102040:{koreanName:"노랑색 모험가의 망토",icon:"https://maplestory.io/api/GMS/200/item/1102040/icon",stats:{attack:0,str:0,dex:0,int:0,luk:0,mad:0,pdef:15,mdef:10,acc:0,eva:0},requireStats:{level:50,str:0,dex:0,int:0,luk:0}}};export{t as default};

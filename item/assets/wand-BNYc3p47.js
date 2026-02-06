@@ -1,1 +1,0 @@
-const t={1372034:{koreanName:"메이플 샤이니 완드",icon:"https://maplestory.io/api/GMS/200/item/1372034/icon",stats:{attack:0,str:0,dex:0,int:1,luk:0,mad:80,pdef:0,mdef:0,acc:0,eva:0,attackSpeed:6},requireStats:{level:64,str:0,dex:0,int:0,luk:61}}};export{t as default};
