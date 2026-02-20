@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mapleland.st/sitemap.xml
