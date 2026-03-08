@@ -1,0 +1,1 @@
+const t={1022073:{koreanName:"금이 간 안경",icon:"https://maplestory.io/api/GMS/200/item/1022073/icon",stats:{attack:0,str:1,dex:1,int:1,luk:1,mad:0,pdef:0,mdef:0,acc:0,eva:0,hp:20,mp:20},requireStats:{level:45,str:0,dex:0,int:0,luk:0},tuc:3}};export{t as default};
