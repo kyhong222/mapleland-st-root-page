@@ -1,0 +1,8 @@
+{
+  "redirects": [
+    { "source": "/item", "destination": "https://item.mapleland.st", "permanent": true },
+    { "source": "/item/:path*", "destination": "https://item.mapleland.st/:path*", "permanent": true },
+    { "source": "/skill", "destination": "https://skill.mapleland.st", "permanent": true },
+    { "source": "/skill/:path*", "destination": "https://skill.mapleland.st/:path*", "permanent": true }
+  ]
+}
