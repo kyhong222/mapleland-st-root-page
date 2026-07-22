@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import { tools } from './data/tools';
 import { ToolCard } from './components/ToolCard';
 
@@ -12,6 +13,7 @@ function App() {
           <ToolCard key={tool.href} {...tool} />
         ))}
       </div>
+      <Analytics />
     </div>
   );
 }
