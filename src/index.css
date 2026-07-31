@@ -9,7 +9,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #0f409c;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -21,6 +21,23 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+}
+
+/* 배경 이미지는 고정 레이어로 깔아 스크롤 시에도 고정되게 한다.
+   (background-attachment: fixed 는 모바일 사파리에서 동작하지 않음) */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(6, 23, 74, 0.28) 0%,
+      rgba(6, 23, 74, 0.05) 40%,
+      rgba(6, 23, 74, 0.3) 100%
+    ),
+    url('./assets/background.jpg') center / cover no-repeat;
 }
 
 #root {

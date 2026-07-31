@@ -1,13 +1,21 @@
 import type { Tool } from '../data/tools';
 
-export function ToolCard({ title, description, href }: Tool) {
+export function ToolCard({ title, description, href, icon }: Tool) {
   return (
     <a
       href={href}
-      className="block rounded-lg border border-gray-700 bg-gray-800 p-6 transition-colors hover:border-gray-500 hover:bg-gray-700"
+      className="flex items-center gap-4 rounded-xl border border-white/70 bg-white/85 p-6 shadow-[0_10px_30px_-12px_rgba(6,23,74,0.6)] backdrop-blur-md transition duration-200 hover:-translate-y-0.5 hover:border-[#5093e1] hover:bg-white hover:shadow-[0_16px_36px_-12px_rgba(6,23,74,0.7)]"
     >
-      <h2 className="mb-2 text-xl font-semibold text-white">{title}</h2>
-      <p className="text-sm text-gray-400">{description}</p>
+      <img
+        src={icon}
+        alt=""
+        aria-hidden="true"
+        className="h-10 w-10 shrink-0 [image-rendering:pixelated]"
+      />
+      <div className="min-w-0 border-l border-[#0f409c]/25 pl-4">
+        <h2 className="mb-1 text-xl font-semibold text-[#0f2f6b]">{title}</h2>
+        <p className="text-sm text-slate-600">{description}</p>
+      </div>
     </a>
   );
 }
