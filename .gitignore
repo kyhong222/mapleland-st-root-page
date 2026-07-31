@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# 이 레포는 package-lock.json 을 사용한다
+yarn.lock
+
 # Editor directories and files
 .claude/
 .vscode/*
