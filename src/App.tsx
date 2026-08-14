@@ -10,7 +10,7 @@ function App() {
           메이플랜드.세팅
         </h1>
       </header>
-      <div className="grid gap-4 sm:grid-cols-2">
+      <div className="mx-auto grid max-w-2xl gap-4">
         {tools.map((tool) => (
           <ToolCard key={tool.href} {...tool} />
         ))}
