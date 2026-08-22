@@ -6,10 +6,11 @@
   "homepage": "https://mapleland.st/",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && vite build --ssr src/entry-server.tsx --outDir dist-ssr && node scripts/prerender.mjs",
     "deploy": "npm run build && gh-pages -d dist",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "fetch-issues": "node scripts/fetch-issues.mjs"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",
