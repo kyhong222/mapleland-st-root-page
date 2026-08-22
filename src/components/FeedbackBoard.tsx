@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import {
   formatDate,
-  newIssueUrl,
   resolvedCount,
   services,
   totalCount,
   type Issue,
   type ServiceFeedback,
 } from '../data/issues';
+import { FeedbackDialog } from './FeedbackDialog';
 
 const CATEGORY_STYLE: Record<string, string> = {
   버그: 'bg-rose-50 text-rose-700 ring-rose-200',
@@ -70,7 +70,15 @@ function IssueRow({ issue }: { issue: Issue }) {
   );
 }
 
-function Panel({ service, active }: { service: ServiceFeedback; active: boolean }) {
+function Panel({
+  service,
+  active,
+  onWriteFeedback,
+}: {
+  service: ServiceFeedback;
+  active: boolean;
+  onWriteFeedback: () => void;
+}) {
   const resolved = service.issues.filter((i) => i.state === 'closed').length;
   return (
     // 비활성 패널을 렌더링에서 빼면 프리렌더된 HTML 에서도 사라져 크롤러가 못 읽는다.
@@ -90,14 +98,13 @@ function Panel({ service, active }: { service: ServiceFeedback; active: boolean 
           <span className="mx-1.5 text-slate-300">·</span>
           {service.issues.length}건 접수 · {resolved}건 반영
         </p>
-        <a
-          href={newIssueUrl(service.repo)}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="ml-auto text-sm font-medium text-[#0f409c] underline-offset-2 hover:underline"
+        <button
+          type="button"
+          onClick={onWriteFeedback}
+          className="ml-auto rounded-lg bg-[#0f409c] px-3 py-1.5 text-sm font-medium text-white transition hover:bg-[#0d3585]"
         >
-          의견 남기기 →
-        </a>
+          의견 남기기
+        </button>
       </div>
 
       {service.issues.length > 0 ? (
@@ -115,6 +122,8 @@ function Panel({ service, active }: { service: ServiceFeedback; active: boolean 
 
 export function FeedbackBoard() {
   const [activeKey, setActiveKey] = useState(services[0].key);
+  // 열려 있을 때만 렌더링하므로 프리렌더 결과에는 다이얼로그가 없다. 하이드레이션도 어긋나지 않는다.
+  const [formService, setFormService] = useState<ServiceFeedback | null>(null);
 
   return (
     <div className="mx-auto mt-12 max-w-2xl">
@@ -157,9 +166,18 @@ export function FeedbackBoard() {
         </div>
 
         {services.map((service) => (
-          <Panel key={service.key} service={service} active={service.key === activeKey} />
+          <Panel
+            key={service.key}
+            service={service}
+            active={service.key === activeKey}
+            onWriteFeedback={() => setFormService(service)}
+          />
         ))}
       </section>
+
+      {formService && (
+        <FeedbackDialog service={formService} onClose={() => setFormService(null)} />
+      )}
     </div>
   );
 }
