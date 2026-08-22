@@ -8,7 +8,6 @@ interface Block {
 
 interface Comment extends Block {
   id: number;
-  author: string;
   isOwner: boolean;
   createdAt: string;
 }
@@ -18,8 +17,6 @@ interface Detail {
   state: 'open' | 'closed';
   createdAt: string;
   url: string;
-  viaForm: boolean;
-  author: string;
   body: Block;
   comments: Comment[];
 }
@@ -137,36 +134,48 @@ export function IssueDetailDialog({
             <p className="text-sm text-slate-400">불러오는 중…</p>
           ) : (
             <>
-              {/* 폼 접수 글은 GitHub 상 작성자가 레포 주인이라 그대로 쓰면 오해를 준다. */}
-              <p className="mb-1.5 text-xs font-medium text-slate-500">
-                작성자 · {detail.viaForm ? '익명' : detail.author}
-              </p>
-              <Body block={detail.body} empty="내용이 없습니다." />
+              {/* 작성자는 보여주지 않는다. 폼 접수 글은 GitHub 상 작성자가 전부 같은
+                  계정이라 의미가 없다. 문의 / 답변 구분만 남긴다. */}
+              <div className="flex gap-3">
+                <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-slate-200 text-xs font-bold text-slate-600">
+                  Q
+                </span>
+                <div className="min-w-0 flex-1">
+                  <Body block={detail.body} empty="내용이 없습니다." />
+                </div>
+              </div>
 
               <div className="mt-6 border-t border-[#0f409c]/15 pt-4">
-                <h4 className="mb-3 text-sm font-semibold text-[#0f2f6b]">
-                  답변 {detail.comments.length}개
-                </h4>
                 {detail.comments.length === 0 ? (
                   <p className="text-sm text-slate-400">아직 답변이 없습니다.</p>
                 ) : (
                   <ul className="space-y-4">
                     {detail.comments.map((c) => (
-                      <li
-                        key={c.id}
-                        className={`rounded-lg p-3 ${
-                          c.isOwner ? 'bg-[#5093e1]/10 ring-1 ring-inset ring-[#5093e1]/25' : 'bg-slate-50'
-                        }`}
-                      >
-                        <div className="mb-1.5 flex items-center gap-2">
-                          <span className="text-xs font-medium text-[#0f2f6b]">
-                            {c.isOwner ? '운영자' : c.author}
-                          </span>
-                          <time dateTime={c.createdAt} className="text-xs text-slate-400">
-                            {formatDate(c.createdAt)}
-                          </time>
+                      <li key={c.id} className="flex gap-3">
+                        <span
+                          className={`mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs font-bold ${
+                            c.isOwner ? 'bg-[#0f409c] text-white' : 'bg-slate-200 text-slate-600'
+                          }`}
+                        >
+                          {c.isOwner ? 'A' : '+'}
+                        </span>
+                        <div
+                          className={`min-w-0 flex-1 rounded-lg p-3 ${
+                            c.isOwner
+                              ? 'bg-[#5093e1]/10 ring-1 ring-inset ring-[#5093e1]/25'
+                              : 'bg-slate-50'
+                          }`}
+                        >
+                          <div className="mb-1.5 flex items-center gap-2">
+                            <span className="text-xs font-medium text-[#0f2f6b]">
+                              {c.isOwner ? '운영자 답변' : '추가 의견'}
+                            </span>
+                            <time dateTime={c.createdAt} className="text-xs text-slate-400">
+                              {formatDate(c.createdAt)}
+                            </time>
+                          </div>
+                          <Body block={c} empty="내용이 없습니다." />
                         </div>
-                        <Body block={c} empty="내용이 없습니다." />
                       </li>
                     ))}
                   </ul>
