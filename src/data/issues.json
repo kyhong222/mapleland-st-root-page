@@ -8,6 +8,19 @@
       "url": "https://skill.mapleland.st",
       "issues": [
         {
+          "number": 7,
+          "title": "스틸 스킬의 타겟수와 퍼뎀표기가 업데이트 되지않았습니다",
+          "category": "버그",
+          "state": "open",
+          "labels": [
+            "feedback"
+          ],
+          "createdAt": "2026-08-22T14:16:11Z",
+          "closedAt": null,
+          "url": "https://github.com/kyhong222/ms-skill-simulator/issues/7",
+          "reply": null
+        },
+        {
           "number": 6,
           "title": "블리자드 마나소모량이 실제와 다른것 같습니다",
           "category": "버그",
