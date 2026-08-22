@@ -1,9 +1,7 @@
-import { useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import {
   formatDate,
-  resolvedCount,
-  services,
-  totalCount,
+  services as bakedServices,
   type Issue,
   type ServiceFeedback,
 } from '../data/issues';
@@ -90,9 +88,12 @@ function Panel({
       hidden={!active}
       className={active ? undefined : 'hidden'}
     >
-      <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1 px-6 pt-4">
+      <div className="flex flex-wrap items-center gap-x-3 gap-y-2 px-6 pt-4">
         <p className="text-sm text-slate-500">
-          <a href={service.url} className="font-medium text-[#0f2f6b] underline-offset-2 hover:underline">
+          <a
+            href={service.url}
+            className="font-medium text-[#0f2f6b] underline-offset-2 hover:underline"
+          >
             {service.name}
           </a>
           <span className="mx-1.5 text-slate-300">·</span>
@@ -120,10 +121,60 @@ function Panel({
   );
 }
 
+// 구워진 데이터에만 답변이 들어 있다. (/api/issues 는 댓글까지 받지 않는다)
+// 최신 목록에 이슈 번호로 답변을 이어붙인다.
+function withBakedReplies(fresh: ServiceFeedback[]): ServiceFeedback[] {
+  return fresh.map((service) => {
+    const baked = bakedServices.find((s) => s.key === service.key);
+    if (!baked) return service;
+    const replies = new Map(baked.issues.map((i) => [i.number, i.reply]));
+    return {
+      ...service,
+      issues: service.issues.map((i) => ({ ...i, reply: i.reply ?? replies.get(i.number) ?? null })),
+    };
+  });
+}
+
 export function FeedbackBoard() {
-  const [activeKey, setActiveKey] = useState(services[0].key);
-  // 열려 있을 때만 렌더링하므로 프리렌더 결과에는 다이얼로그가 없다. 하이드레이션도 어긋나지 않는다.
+  // 초기값은 구워진 데이터. SSR 결과와 같아야 하이드레이션이 어긋나지 않는다.
+  const [services, setServices] = useState<ServiceFeedback[]>(bakedServices);
+  const [activeKey, setActiveKey] = useState(bakedServices[0].key);
+  // 열려 있을 때만 렌더링하므로 프리렌더 결과에는 다이얼로그가 없다.
   const [formService, setFormService] = useState<ServiceFeedback | null>(null);
+
+  const refresh = useCallback(async (bustCache = false) => {
+    try {
+      const res = await fetch(bustCache ? `/api/issues?t=${Date.now()}` : '/api/issues');
+      if (!res.ok) return;
+      const data = await res.json();
+      if (Array.isArray(data?.services)) setServices(withBakedReplies(data.services));
+    } catch {
+      // 실패하면 구워진 데이터를 그대로 쓴다. 목록이 조금 오래된 것뿐이다.
+    }
+  }, []);
+
+  useEffect(() => {
+    void refresh();
+  }, [refresh]);
+
+  // 등록 직후에는 응답으로 받은 이슈를 바로 끼워 넣는다.
+  // GitHub 반영에 시간이 걸려도 사용자는 자기 글을 즉시 본다.
+  const handleSubmitted = (serviceKey: string, issue: Issue) => {
+    setServices((prev) =>
+      prev.map((s) =>
+        s.key === serviceKey && !s.issues.some((i) => i.number === issue.number)
+          ? { ...s, issues: [issue, ...s.issues] }
+          : s,
+      ),
+    );
+    void refresh(true);
+  };
+
+  const totalCount = services.reduce((n, s) => n + s.issues.length, 0);
+  const resolvedCount = services.reduce(
+    (n, s) => n + s.issues.filter((i) => i.state === 'closed').length,
+    0,
+  );
 
   return (
     <div className="mx-auto mt-12 max-w-2xl">
@@ -133,12 +184,16 @@ export function FeedbackBoard() {
         </h2>
         <p className="mt-1.5 text-sm text-white/85 [text-shadow:0_1px_6px_rgba(6,23,74,0.85)]">
           지금까지 {totalCount}건이 접수되어 {resolvedCount}건이 반영되었습니다. 버그 제보와 기능
-          건의는 각 서비스의 GitHub 이슈로 받고 있습니다.
+          건의를 GitHub 계정 없이 남기실 수 있습니다.
         </p>
       </header>
 
       <section className="overflow-hidden rounded-xl border border-white/70 bg-white/85 shadow-[0_10px_30px_-12px_rgba(6,23,74,0.6)] backdrop-blur-md">
-        <div role="tablist" aria-label="서비스별 사용자 의견" className="flex border-b border-[#0f409c]/25">
+        <div
+          role="tablist"
+          aria-label="서비스별 사용자 의견"
+          className="flex border-b border-[#0f409c]/25"
+        >
           {services.map((service) => {
             const active = service.key === activeKey;
             return (
@@ -176,7 +231,11 @@ export function FeedbackBoard() {
       </section>
 
       {formService && (
-        <FeedbackDialog service={formService} onClose={() => setFormService(null)} />
+        <FeedbackDialog
+          service={formService}
+          onSubmitted={handleSubmitted}
+          onClose={() => setFormService(null)}
+        />
       )}
     </div>
   );
