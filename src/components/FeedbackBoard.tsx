@@ -6,6 +6,7 @@ import {
   type ServiceFeedback,
 } from '../data/issues';
 import { FeedbackDialog } from './FeedbackDialog';
+import { IssueDetailDialog } from './IssueDetailDialog';
 
 const CATEGORY_STYLE: Record<string, string> = {
   버그: 'bg-rose-50 text-rose-700 ring-rose-200',
@@ -23,7 +24,7 @@ function Badge({ className, children }: { className: string; children: React.Rea
   );
 }
 
-function IssueRow({ issue }: { issue: Issue }) {
+function IssueRow({ issue, onOpen }: { issue: Issue; onOpen: () => void }) {
   const resolved = issue.state === 'closed';
   return (
     <li className="border-t border-[#0f409c]/10 py-3 first:border-t-0">
@@ -47,11 +48,16 @@ function IssueRow({ issue }: { issue: Issue }) {
         </time>
       </div>
 
+      {/* GitHub 링크를 유지한 채 클릭만 가로챈다. 크롤러와 새 탭으로 열기는 그대로 살고,
+          평범한 클릭은 자체 상세 화면으로 간다. */}
       <h4 className="mt-1.5 text-[0.95rem] font-medium leading-snug text-[#0f2f6b]">
         <a
           href={issue.url}
-          target="_blank"
-          rel="noopener noreferrer"
+          onClick={(e) => {
+            if (e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
+            e.preventDefault();
+            onOpen();
+          }}
           className="underline-offset-2 hover:underline"
         >
           {issue.title}
@@ -59,10 +65,14 @@ function IssueRow({ issue }: { issue: Issue }) {
       </h4>
 
       {issue.reply && (
-        <p className="mt-1.5 border-l-2 border-[#5093e1]/50 pl-3 text-sm leading-relaxed text-slate-600">
+        <button
+          type="button"
+          onClick={onOpen}
+          className="mt-1.5 block w-full border-l-2 border-[#5093e1]/50 pl-3 text-left text-sm leading-relaxed text-slate-600 transition hover:text-slate-900"
+        >
           <span className="font-medium text-[#0f2f6b]">답변 </span>
           {issue.reply}
-        </p>
+        </button>
       )}
     </li>
   );
@@ -72,10 +82,12 @@ function Panel({
   service,
   active,
   onWriteFeedback,
+  onOpenIssue,
 }: {
   service: ServiceFeedback;
   active: boolean;
   onWriteFeedback: () => void;
+  onOpenIssue: (issue: Issue) => void;
 }) {
   const resolved = service.issues.filter((i) => i.state === 'closed').length;
   return (
@@ -111,7 +123,7 @@ function Panel({
       {service.issues.length > 0 ? (
         <ul className="max-h-[26rem] overflow-y-auto overscroll-contain px-6 pb-4">
           {service.issues.map((issue) => (
-            <IssueRow key={issue.number} issue={issue} />
+            <IssueRow key={issue.number} issue={issue} onOpen={() => onOpenIssue(issue)} />
           ))}
         </ul>
       ) : (
@@ -141,6 +153,7 @@ export function FeedbackBoard() {
   const [activeKey, setActiveKey] = useState(bakedServices[0].key);
   // 열려 있을 때만 렌더링하므로 프리렌더 결과에는 다이얼로그가 없다.
   const [formService, setFormService] = useState<ServiceFeedback | null>(null);
+  const [detail, setDetail] = useState<{ service: ServiceFeedback; issue: Issue } | null>(null);
 
   const refresh = useCallback(async (bustCache = false) => {
     try {
@@ -226,6 +239,7 @@ export function FeedbackBoard() {
             service={service}
             active={service.key === activeKey}
             onWriteFeedback={() => setFormService(service)}
+            onOpenIssue={(issue) => setDetail({ service, issue })}
           />
         ))}
       </section>
@@ -235,6 +249,14 @@ export function FeedbackBoard() {
           service={formService}
           onSubmitted={handleSubmitted}
           onClose={() => setFormService(null)}
+        />
+      )}
+
+      {detail && (
+        <IssueDetailDialog
+          service={detail.service}
+          issue={detail.issue}
+          onClose={() => setDetail(null)}
         />
       )}
     </div>
