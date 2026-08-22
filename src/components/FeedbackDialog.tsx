@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import type { ServiceFeedback } from '../data/issues';
+import type { Issue, ServiceFeedback } from '../data/issues';
 
 const ENDPOINT = '/api/feedback';
 
@@ -32,9 +32,11 @@ type Status = 'idle' | 'submitting' | 'success' | 'error';
 
 export function FeedbackDialog({
   service,
+  onSubmitted,
   onClose,
 }: {
   service: ServiceFeedback;
+  onSubmitted: (serviceKey: string, issue: Issue) => void;
   onClose: () => void;
 }) {
   const [type, setType] = useState<FeedbackType>('bug');
@@ -86,6 +88,21 @@ export function FeedbackDialog({
       if (!res.ok) throw new Error(data?.error ?? `서버 응답 오류 (${res.status})`);
       setResultUrl(typeof data?.url === 'string' ? data.url : '');
       setStatus('success');
+
+      // 목록에 바로 끼워 넣어 등록한 사람이 자기 글을 즉시 보게 한다.
+      if (typeof data?.number === 'number') {
+        onSubmitted(service.key, {
+          number: data.number,
+          title: title.trim(),
+          category: TYPE_TAG[type],
+          state: 'open',
+          labels: [],
+          createdAt: new Date().toISOString(),
+          closedAt: null,
+          url: typeof data.url === 'string' ? data.url : '',
+          reply: null,
+        });
+      }
     } catch (e) {
       setErrorMsg(e instanceof Error ? e.message : '전송에 실패했습니다.');
       setStatus('error');
