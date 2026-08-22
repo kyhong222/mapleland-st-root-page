@@ -15,6 +15,7 @@ export interface Issue {
 export interface ServiceFeedback {
   key: string;
   name: string;
+  shortName: string;
   repo: string;
   url: string;
   issues: Issue[];

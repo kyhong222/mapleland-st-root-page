@@ -8,22 +8,26 @@ import { fileURLToPath } from 'node:url';
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const OUT = resolve(ROOT, 'src/data/issues.json');
 
+// shortName 은 탭 라벨용. 좁은 화면에서도 세 개가 한 줄에 들어가야 한다.
 const SERVICES = [
   {
     key: 'skill',
     name: '스킬 시뮬레이터',
+    shortName: '스킬',
     repo: 'kyhong222/ms-skill-simulator',
     url: 'https://skill.mapleland.st',
   },
   {
     key: 'item',
     name: '템세팅 시뮬레이터 2.0',
+    shortName: '템세팅',
     repo: 'kyhong222/mapleland-setting-v2',
     url: 'https://item.mapleland.st',
   },
   {
     key: 'coin',
     name: '월드코인 환전 계산기',
+    shortName: '월드코인',
     repo: 'kyhong222/mapleland-coin-calculator',
     url: 'https://coin.mapleland.st',
   },
