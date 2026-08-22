@@ -19,6 +19,7 @@ interface Detail {
   createdAt: string;
   url: string;
   viaForm: boolean;
+  author: string;
   body: Block;
   comments: Comment[];
 }
@@ -136,8 +137,9 @@ export function IssueDetailDialog({
             <p className="text-sm text-slate-400">불러오는 중…</p>
           ) : (
             <>
+              {/* 폼 접수 글은 GitHub 상 작성자가 레포 주인이라 그대로 쓰면 오해를 준다. */}
               <p className="mb-1.5 text-xs font-medium text-slate-500">
-                {detail.viaForm ? '작성자 · 익명' : '작성자 · GitHub'}
+                작성자 · {detail.viaForm ? '익명' : detail.author}
               </p>
               <Body block={detail.body} empty="내용이 없습니다." />
 
