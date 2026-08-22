@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import {
   formatDate,
   newIssueUrl,
@@ -69,17 +70,24 @@ function IssueRow({ issue }: { issue: Issue }) {
   );
 }
 
-function ServiceSection({ service }: { service: ServiceFeedback }) {
+function Panel({ service, active }: { service: ServiceFeedback; active: boolean }) {
   const resolved = service.issues.filter((i) => i.state === 'closed').length;
   return (
-    <section className="rounded-xl border border-white/70 bg-white/85 p-6 shadow-[0_10px_30px_-12px_rgba(6,23,74,0.6)] backdrop-blur-md">
-      <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1 border-b border-[#0f409c]/25 pb-3">
-        <h3 className="text-lg font-semibold text-[#0f2f6b]">
-          <a href={service.url} className="underline-offset-2 hover:underline">
+    // 비활성 패널을 렌더링에서 빼면 프리렌더된 HTML 에서도 사라져 크롤러가 못 읽는다.
+    // 세 패널을 모두 심어두고 hidden 으로만 가린다.
+    <div
+      role="tabpanel"
+      id={`feedback-panel-${service.key}`}
+      aria-labelledby={`feedback-tab-${service.key}`}
+      hidden={!active}
+      className={active ? undefined : 'hidden'}
+    >
+      <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1 px-6 pt-4">
+        <p className="text-sm text-slate-500">
+          <a href={service.url} className="font-medium text-[#0f2f6b] underline-offset-2 hover:underline">
             {service.name}
           </a>
-        </h3>
-        <p className="text-sm text-slate-500">
+          <span className="mx-1.5 text-slate-300">·</span>
           {service.issues.length}건 접수 · {resolved}건 반영
         </p>
         <a
@@ -93,19 +101,21 @@ function ServiceSection({ service }: { service: ServiceFeedback }) {
       </div>
 
       {service.issues.length > 0 ? (
-        <ul>
+        <ul className="max-h-[26rem] overflow-y-auto overscroll-contain px-6 pb-4">
           {service.issues.map((issue) => (
             <IssueRow key={issue.number} issue={issue} />
           ))}
         </ul>
       ) : (
-        <p className="pt-3 text-sm text-slate-500">아직 접수된 의견이 없습니다.</p>
+        <p className="px-6 pb-6 pt-3 text-sm text-slate-500">아직 접수된 의견이 없습니다.</p>
       )}
-    </section>
+    </div>
   );
 }
 
 export function FeedbackBoard() {
+  const [activeKey, setActiveKey] = useState(services[0].key);
+
   return (
     <div className="mx-auto mt-12 max-w-2xl">
       <header className="mb-4 text-center">
@@ -118,11 +128,38 @@ export function FeedbackBoard() {
         </p>
       </header>
 
-      <div className="grid gap-4">
+      <section className="overflow-hidden rounded-xl border border-white/70 bg-white/85 shadow-[0_10px_30px_-12px_rgba(6,23,74,0.6)] backdrop-blur-md">
+        <div role="tablist" aria-label="서비스별 사용자 의견" className="flex border-b border-[#0f409c]/25">
+          {services.map((service) => {
+            const active = service.key === activeKey;
+            return (
+              <button
+                key={service.key}
+                type="button"
+                role="tab"
+                id={`feedback-tab-${service.key}`}
+                aria-selected={active}
+                aria-controls={`feedback-panel-${service.key}`}
+                onClick={() => setActiveKey(service.key)}
+                className={`flex-1 border-b-2 px-3 py-3 text-sm font-medium transition ${
+                  active
+                    ? 'border-[#0f409c] text-[#0f2f6b]'
+                    : 'border-transparent text-slate-500 hover:bg-white/60 hover:text-[#0f2f6b]'
+                }`}
+              >
+                {service.shortName}
+                <span className={`ml-1.5 text-xs ${active ? 'text-[#5093e1]' : 'text-slate-400'}`}>
+                  {service.issues.length}
+                </span>
+              </button>
+            );
+          })}
+        </div>
+
         {services.map((service) => (
-          <ServiceSection key={service.key} service={service} />
+          <Panel key={service.key} service={service} active={service.key === activeKey} />
         ))}
-      </div>
+      </section>
     </div>
   );
 }

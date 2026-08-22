@@ -3,6 +3,7 @@
     {
       "key": "skill",
       "name": "스킬 시뮬레이터",
+      "shortName": "스킬",
       "repo": "kyhong222/ms-skill-simulator",
       "url": "https://skill.mapleland.st",
       "issues": [
@@ -22,7 +23,7 @@
         {
           "number": 5,
           "title": "비홀더 숙련도 수치가 이상합니다",
-          "category": "스킬 수치 오류",
+          "category": "버그",
           "state": "open",
           "labels": [
             "feedback"
@@ -59,6 +60,7 @@
     {
       "key": "item",
       "name": "템세팅 시뮬레이터 2.0",
+      "shortName": "템세팅",
       "repo": "kyhong222/mapleland-setting-v2",
       "url": "https://item.mapleland.st",
       "issues": [
@@ -74,7 +76,7 @@
           "createdAt": "2026-08-20T04:16:16Z",
           "closedAt": null,
           "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/31",
-          "reply": null
+          "reply": "어떻게 다른지 구체적으로 남겨주시면 검토해보겠습니다.."
         },
         {
           "number": 30,
@@ -108,15 +110,15 @@
           "number": 28,
           "title": "몬스터 취소 버튼 만들어주세요",
           "category": "건의",
-          "state": "open",
+          "state": "closed",
           "labels": [
             "user-feedback",
             "건의"
           ],
           "createdAt": "2026-08-18T09:29:12Z",
-          "closedAt": null,
+          "closedAt": "2026-08-22T12:42:44Z",
           "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/28",
-          "reply": null
+          "reply": "일단 몬스터가 직업별로 따로 움직이도록 변경함 필요없으면 UI 접기기능을 활용해주세요"
         },
         {
           "number": 27,
@@ -501,6 +503,7 @@
     {
       "key": "coin",
       "name": "월드코인 환전 계산기",
+      "shortName": "월드코인",
       "repo": "kyhong222/mapleland-coin-calculator",
       "url": "https://coin.mapleland.st",
       "issues": [
