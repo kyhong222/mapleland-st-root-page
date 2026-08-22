@@ -26,9 +26,16 @@ const ALLOWED_IMAGE_PREFIXES = [
   'https://raw.githubusercontent.com/',
 ];
 
-// api/feedback.js 가 폼 접수 글에 남기는 표식. 이게 있으면 GitHub 작성자는
-// 토큰 소유자(레포 주인)일 뿐 실제 작성자가 아니므로 '익명'으로 표시한다.
-const FORM_MARKER = 'mapleland.st 의견 남기기 폼에서 접수됨';
+// 폼 접수 글에 남는 표식. 이게 있으면 GitHub 작성자는 토큰 소유자(레포 주인)일 뿐
+// 실제 작성자가 아니므로 '익명'으로 표시해야 한다.
+//
+// 문구가 레포마다 다르다. 루트 폼은 "mapleland.st 의견 남기기 폼에서 접수됨",
+// item 레포의 자체 폼은 "앱 문의 폼에서 접수됨 · type=bug" 처럼 접미사까지 붙는다.
+// (item 레포 31건이 전부 후자다) 그래서 문구 전체가 아니라 공통 어구로 잡는다.
+// 검사용과 치환용을 따로 둔다. g 플래그가 붙은 정규식에 test() 를 쓰면
+// lastIndex 가 남아 다음 호출이 엉뚱하게 실패한다.
+const FORM_FOOTER = /<sub>[^<]*폼에서 접수됨[^<]*<\/sub>/;
+const FORM_FOOTER_ALL = /<sub>[^<]*폼에서 접수됨[^<]*<\/sub>/g;
 
 const TEXT_MAX = 4000;
 
@@ -43,7 +50,7 @@ function extractImages(markdown) {
 
 function toText(markdown) {
   return markdown
-    .replace(new RegExp(`<sub>\\s*${FORM_MARKER}\\s*</sub>`, 'g'), '')
+    .replace(FORM_FOOTER_ALL, '')
     .replace(/```[\s\S]*?```/g, '[코드]')
     .replace(/!\[[^\]]*\]\([^)]*\)/g, '')
     .replace(/<img[^>]*>/gi, '')
@@ -102,8 +109,10 @@ export default async function handler(req, res) {
       state: issue.state,
       createdAt: issue.created_at,
       url: issue.html_url,
-      // 폼으로 들어온 글은 GitHub 상 작성자가 레포 주인이라 표시하지 않는다.
-      viaForm: rawBody.includes(FORM_MARKER),
+      // 폼으로 들어온 글은 GitHub 상 작성자가 레포 주인이라 그대로 쓰면 안 된다.
+      // 그 외에는 실제 작성자를 그대로 보여주는 편이 정확하다. (레포 주인이 직접 쓴 글도 있다)
+      viaForm: FORM_FOOTER.test(rawBody),
+      author: issue.user?.login ?? '알 수 없음',
       body: present(rawBody),
       comments: comments.map((c) => ({
         id: c.id,
