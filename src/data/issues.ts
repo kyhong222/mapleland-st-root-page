@@ -34,7 +34,3 @@ export const resolvedCount = services.reduce(
 export function formatDate(iso: string) {
   return `${iso.slice(0, 4)}.${iso.slice(5, 7)}.${iso.slice(8, 10)}`;
 }
-
-export function newIssueUrl(repo: string) {
-  return `https://github.com/${repo}/issues/new`;
-}
