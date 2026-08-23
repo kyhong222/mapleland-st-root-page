@@ -78,6 +78,20 @@
       "url": "https://item.mapleland.st",
       "issues": [
         {
+          "number": 33,
+          "title": "앰플 마스터 데미지 오류",
+          "category": "버그",
+          "state": "open",
+          "labels": [
+            "user-feedback",
+            "버그"
+          ],
+          "createdAt": "2026-08-23T14:26:53Z",
+          "closedAt": null,
+          "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/33",
+          "reply": null
+        },
+        {
           "number": 31,
           "title": "망수대 피격 / 마공 데미지 실제랑 달라요",
           "category": "버그",
