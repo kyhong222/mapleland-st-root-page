@@ -11,40 +11,40 @@
           "number": 7,
           "title": "스틸 스킬의 타겟수와 퍼뎀표기가 업데이트 되지않았습니다",
           "category": "버그",
-          "state": "open",
+          "state": "closed",
           "labels": [
             "feedback"
           ],
           "createdAt": "2026-08-22T14:16:11Z",
-          "closedAt": null,
+          "closedAt": "2026-08-24T12:21:55Z",
           "url": "https://github.com/kyhong222/ms-skill-simulator/issues/7",
-          "reply": null
+          "reply": "스킬 정보는 일단 마스터 레벨 기준으로만 패치하기 어려운 점이 있어서, 스킬정보를 받은다음 패치하려고 최대한 노력하고는 있습니다. 다만, 제가 모든캐릭을 충분히 키우고 있는게 아닌지라 스킬정보를 취득하는데 어려움이 있는것도 사실입니다.. 자주쓰이는 마스터 레벨만 변경하고 추가 취합을 할지는 조금 더 고민해보겠습니다. 혹…"
         },
         {
           "number": 6,
           "title": "블리자드 마나소모량이 실제와 다른것 같습니다",
           "category": "버그",
-          "state": "open",
+          "state": "closed",
           "labels": [
             "feedback"
           ],
           "createdAt": "2026-08-15T05:09:31Z",
-          "closedAt": null,
+          "closedAt": "2026-08-24T12:22:07Z",
           "url": "https://github.com/kyhong222/ms-skill-simulator/issues/6",
-          "reply": null
+          "reply": "스킬 정보는 일단 마스터 레벨 기준으로만 패치하기 어려운 점이 있어서, 스킬정보를 받은다음 패치하려고 최대한 노력하고는 있습니다. 다만, 제가 모든캐릭을 충분히 키우고 있는게 아닌지라 스킬정보를 취득하는데 어려움이 있는것도 사실입니다.. 자주쓰이는 마스터 레벨만 변경하고 추가 취합을 할지는 조금 더 고민해보겠습니다. 혹…"
         },
         {
           "number": 5,
           "title": "비홀더 숙련도 수치가 이상합니다",
           "category": "버그",
-          "state": "open",
+          "state": "closed",
           "labels": [
             "feedback"
           ],
           "createdAt": "2026-08-14T13:00:06Z",
-          "closedAt": null,
+          "closedAt": "2026-08-24T12:22:00Z",
           "url": "https://github.com/kyhong222/ms-skill-simulator/issues/5",
-          "reply": null
+          "reply": "스킬 정보는 일단 마스터 레벨 기준으로만 패치하기 어려운 점이 있어서, 스킬정보를 받은다음 패치하려고 최대한 노력하고는 있습니다. 다만, 제가 모든캐릭을 충분히 키우고 있는게 아닌지라 스킬정보를 취득하는데 어려움이 있는것도 사실입니다.. 자주쓰이는 마스터 레벨만 변경하고 추가 취합을 할지는 조금 더 고민해보겠습니다. 혹…"
         },
         {
           "number": 2,
@@ -81,15 +81,15 @@
           "number": 33,
           "title": "앰플 마스터 데미지 오류",
           "category": "버그",
-          "state": "open",
+          "state": "closed",
           "labels": [
             "user-feedback",
             "버그"
           ],
           "createdAt": "2026-08-23T14:26:53Z",
-          "closedAt": null,
+          "closedAt": "2026-08-24T12:20:59Z",
           "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/33",
-          "reply": null
+          "reply": "스킬 정보는 일단 마스터 레벨 기준으로만 패치하기 어려운 점이 있어서, 스킬정보를 받은다음 패치하려고 최대한 노력하고는 있습니다. 다만, 제가 모든캐릭을 충분히 키우고 있는게 아닌지라 스킬정보를 취득하는데 어려움이 있는것도 사실입니다.. 자주쓰이는 마스터 레벨만 변경하고 추가 취합을 할지는 조금 더 고민해보겠습니다. 혹…"
         },
         {
           "number": 31,
@@ -109,29 +109,29 @@
           "number": 30,
           "title": "앰플리피케이션 40퍼 증가가 아니라 150퍼 증가에요",
           "category": "버그",
-          "state": "open",
+          "state": "closed",
           "labels": [
             "user-feedback",
             "버그"
           ],
           "createdAt": "2026-08-20T02:13:02Z",
-          "closedAt": null,
+          "closedAt": "2026-08-24T12:21:06Z",
           "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/30",
-          "reply": null
+          "reply": "스킬 정보는 일단 마스터 레벨 기준으로만 패치하기 어려운 점이 있어서, 스킬정보를 받은다음 패치하려고 최대한 노력하고는 있습니다. 다만, 제가 모든캐릭을 충분히 키우고 있는게 아닌지라 스킬정보를 취득하는데 어려움이 있는것도 사실입니다.. 자주쓰이는 마스터 레벨만 변경하고 추가 취합을 할지는 조금 더 고민해보겠습니다. 혹…"
         },
         {
           "number": 29,
           "title": "블리자드 체인라이트닝 앰플리피케이션 스킬 개편된거 업뎃 좀요",
           "category": "버그",
-          "state": "open",
+          "state": "closed",
           "labels": [
             "user-feedback",
             "버그"
           ],
           "createdAt": "2026-08-20T02:08:33Z",
-          "closedAt": null,
+          "closedAt": "2026-08-24T12:21:11Z",
           "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/29",
-          "reply": null
+          "reply": "스킬 정보는 일단 마스터 레벨 기준으로만 패치하기 어려운 점이 있어서, 스킬정보를 받은다음 패치하려고 최대한 노력하고는 있습니다. 다만, 제가 모든캐릭을 충분히 키우고 있는게 아닌지라 스킬정보를 취득하는데 어려움이 있는것도 사실입니다.. 자주쓰이는 마스터 레벨만 변경하고 추가 취합을 할지는 조금 더 고민해보겠습니다. 혹…"
         },
         {
           "number": 28,
