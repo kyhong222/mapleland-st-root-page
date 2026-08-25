@@ -8,6 +8,19 @@
       "url": "https://skill.mapleland.st",
       "issues": [
         {
+          "number": 8,
+          "title": "섀도어 베놈 수치가 다른거 같습니다.",
+          "category": "버그",
+          "state": "closed",
+          "labels": [
+            "feedback"
+          ],
+          "createdAt": "2026-08-25T06:38:23Z",
+          "closedAt": "2026-08-25T11:12:34Z",
+          "url": "https://github.com/kyhong222/ms-skill-simulator/issues/8",
+          "reply": "스킬 정보는 일단 마스터 레벨 기준으로만 패치하기 어려운 점이 있어서, 스킬정보를 받은다음 패치하려고 최대한 노력하고는 있습니다. 다만, 제가 모든캐릭을 충분히 키우고 있는게 아닌지라 스킬정보를 취득하는데 어려움이 있는것도 사실입니다.. 자주쓰이는 마스터 레벨만 변경하고 추가 취합을 할지는 조금 더 고민해보겠습니다. 혹…"
+        },
+        {
           "number": 7,
           "title": "스틸 스킬의 타겟수와 퍼뎀표기가 업데이트 되지않았습니다",
           "category": "버그",
@@ -77,6 +90,32 @@
       "repo": "kyhong222/mapleland-setting-v2",
       "url": "https://item.mapleland.st",
       "issues": [
+        {
+          "number": 35,
+          "title": "체력HP 표기",
+          "category": "건의",
+          "state": "open",
+          "labels": [
+            "user-feedback"
+          ],
+          "createdAt": "2026-08-25T04:38:28Z",
+          "closedAt": null,
+          "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/35",
+          "reply": "감사합니다. HP 관련해서 말씀드리면, 일단 레벨업시 고정HP + 랜덤HP가 상승하는 시스템이라 정확하게 예측은 안됩니다만, 현재 체력을 입력하시면 카투를 쓰고 벗었을때, 정축레벨에따라, 뻥을 받을떄, 등등의 체력을 계산할수는 있습니다. 이부분을 준비중에 있습니다. 의견 감사합니다."
+        },
+        {
+          "number": 34,
+          "title": "제네시스 남둥 n방컷 수치가 이상한듯합니다",
+          "category": "버그",
+          "state": "closed",
+          "labels": [
+            "user-feedback"
+          ],
+          "createdAt": "2026-08-25T01:39:07Z",
+          "closedAt": "2026-08-25T11:43:25Z",
+          "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/34",
+          "reply": "아, 제네/메테오/블리자드는 숙련도가 고정이라 스킬데이터에 숙련도필드가 아예 없어서 마법 숙련도가 작동 안하고있었네요 적용하겠습니다."
+        },
         {
           "number": 33,
           "title": "앰플 마스터 데미지 오류",
