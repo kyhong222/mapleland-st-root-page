@@ -91,6 +91,34 @@
       "url": "https://item.mapleland.st",
       "issues": [
         {
+          "number": 39,
+          "title": "아 정축을 안넣었네요 죄송하빈다",
+          "category": "기타",
+          "state": "open",
+          "labels": [
+            "user-feedback",
+            "기타"
+          ],
+          "createdAt": "2026-08-27T08:03:06Z",
+          "closedAt": null,
+          "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/39",
+          "reply": null
+        },
+        {
+          "number": 38,
+          "title": "스공이 안맞아요",
+          "category": "기타",
+          "state": "open",
+          "labels": [
+            "user-feedback",
+            "기타"
+          ],
+          "createdAt": "2026-08-27T08:02:23Z",
+          "closedAt": null,
+          "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/38",
+          "reply": null
+        },
+        {
           "number": 35,
           "title": "체력HP 표기",
           "category": "건의",
