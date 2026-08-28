@@ -94,13 +94,13 @@
           "number": 39,
           "title": "아 정축을 안넣었네요 죄송하빈다",
           "category": "기타",
-          "state": "open",
+          "state": "closed",
           "labels": [
             "user-feedback",
             "기타"
           ],
           "createdAt": "2026-08-27T08:03:06Z",
-          "closedAt": null,
+          "closedAt": "2026-08-28T03:30:04Z",
           "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/39",
           "reply": null
         },
@@ -108,13 +108,13 @@
           "number": 38,
           "title": "스공이 안맞아요",
           "category": "기타",
-          "state": "open",
+          "state": "closed",
           "labels": [
             "user-feedback",
             "기타"
           ],
           "createdAt": "2026-08-27T08:02:23Z",
-          "closedAt": null,
+          "closedAt": "2026-08-28T03:30:03Z",
           "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/38",
           "reply": null
         },
