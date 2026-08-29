@@ -91,6 +91,20 @@
       "url": "https://item.mapleland.st",
       "issues": [
         {
+          "number": 43,
+          "title": "메용20",
+          "category": "기타",
+          "state": "closed",
+          "labels": [
+            "user-feedback",
+            "기타"
+          ],
+          "createdAt": "2026-08-29T12:43:12Z",
+          "closedAt": "2026-08-29T14:05:07Z",
+          "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/43",
+          "reply": "메용 우클릭하시면 레벨조정 가능하십니다."
+        },
+        {
           "number": 39,
           "title": "아 정축을 안넣었네요 죄송하빈다",
           "category": "기타",
