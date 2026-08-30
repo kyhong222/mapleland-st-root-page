@@ -8,6 +8,19 @@
       "url": "https://skill.mapleland.st",
       "issues": [
         {
+          "number": 12,
+          "title": "캡틴 속강 1만 찍어도 결빙 +2초 되어있습니다",
+          "category": "버그",
+          "state": "open",
+          "labels": [
+            "feedback"
+          ],
+          "createdAt": "2026-08-30T05:33:54Z",
+          "closedAt": null,
+          "url": "https://github.com/kyhong222/ms-skill-simulator/issues/12",
+          "reply": null
+        },
+        {
           "number": 8,
           "title": "섀도어 베놈 수치가 다른거 같습니다.",
           "category": "버그",
@@ -90,6 +103,34 @@
       "repo": "kyhong222/mapleland-setting-v2",
       "url": "https://item.mapleland.st",
       "issues": [
+        {
+          "number": 47,
+          "title": "글잘못적었는데 삭제되나요??",
+          "category": "건의",
+          "state": "open",
+          "labels": [
+            "user-feedback",
+            "건의"
+          ],
+          "createdAt": "2026-08-30T16:53:23Z",
+          "closedAt": null,
+          "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/47",
+          "reply": null
+        },
+        {
+          "number": 46,
+          "title": "공통 버프기능에 메용 20도 추가해주실 수 있나요??",
+          "category": "건의",
+          "state": "open",
+          "labels": [
+            "user-feedback",
+            "건의"
+          ],
+          "createdAt": "2026-08-30T15:36:07Z",
+          "closedAt": null,
+          "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/46",
+          "reply": null
+        },
         {
           "number": 43,
           "title": "메용20",
