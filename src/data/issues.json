@@ -104,6 +104,20 @@
       "url": "https://item.mapleland.st",
       "issues": [
         {
+          "number": 48,
+          "title": "부메랑스텝 공속 관련 오류",
+          "category": "버그",
+          "state": "open",
+          "labels": [
+            "user-feedback",
+            "버그"
+          ],
+          "createdAt": "2026-09-03T13:52:44Z",
+          "closedAt": null,
+          "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/48",
+          "reply": null
+        },
+        {
           "number": 47,
           "title": "글잘못적었는데 삭제되나요??",
           "category": "건의",
