@@ -104,6 +104,34 @@
       "url": "https://item.mapleland.st",
       "issues": [
         {
+          "number": 52,
+          "title": "퀘스리 훈장 추가 해주세요",
+          "category": "건의",
+          "state": "closed",
+          "labels": [
+            "user-feedback",
+            "건의"
+          ],
+          "createdAt": "2026-09-05T08:35:15Z",
+          "closedAt": "2026-09-05T10:14:53Z",
+          "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/52",
+          "reply": "이메일은 지워드렸습니다"
+        },
+        {
+          "number": 51,
+          "title": "아이템 이미지들이 다 안보이고, 흰색 화면으로 깨져보여요!",
+          "category": "버그",
+          "state": "closed",
+          "labels": [
+            "user-feedback",
+            "버그"
+          ],
+          "createdAt": "2026-09-04T21:51:20Z",
+          "closedAt": "2026-09-05T08:15:49Z",
+          "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/51",
+          "reply": "지금 maplestory.io 서버가 맛이 가서 그렇습니다 추이를 지켜보고 데이터셋을 옮기던가 하겠습니다"
+        },
+        {
           "number": 48,
           "title": "부메랑스텝 공속 관련 오류",
           "category": "버그",
@@ -115,7 +143,7 @@
           "createdAt": "2026-09-03T13:52:44Z",
           "closedAt": null,
           "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/48",
-          "reply": null
+          "reply": "부스는 옛메랑 메랜이랑 공속이 달라져서(정확히는 후딜이 없어져서) 차이가 있습니다. 데이터를 얻어서 수정하겠습니다."
         },
         {
           "number": 47,
