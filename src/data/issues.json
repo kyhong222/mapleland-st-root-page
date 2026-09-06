@@ -104,6 +104,20 @@
       "url": "https://item.mapleland.st",
       "issues": [
         {
+          "number": 58,
+          "title": "아이템 색깔 오류",
+          "category": "버그",
+          "state": "open",
+          "labels": [
+            "user-feedback",
+            "버그"
+          ],
+          "createdAt": "2026-09-06T02:04:01Z",
+          "closedAt": null,
+          "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/58",
+          "reply": null
+        },
+        {
           "number": 52,
           "title": "퀘스리 훈장 추가 해주세요",
           "category": "건의",
