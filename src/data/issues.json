@@ -104,6 +104,20 @@
       "url": "https://item.mapleland.st",
       "issues": [
         {
+          "number": 61,
+          "title": "모바일 최적화 요청",
+          "category": "버그",
+          "state": "open",
+          "labels": [
+            "user-feedback",
+            "버그"
+          ],
+          "createdAt": "2026-09-08T04:09:57Z",
+          "closedAt": null,
+          "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/61",
+          "reply": null
+        },
+        {
           "number": 58,
           "title": "아이템 색깔 오류",
           "category": "버그",
