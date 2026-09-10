@@ -104,6 +104,19 @@
       "url": "https://item.mapleland.st",
       "issues": [
         {
+          "number": 62,
+          "title": "소울마스터 마스터리 미적용",
+          "category": "버그",
+          "state": "open",
+          "labels": [
+            "user-feedback"
+          ],
+          "createdAt": "2026-09-10T08:32:14Z",
+          "closedAt": null,
+          "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/62",
+          "reply": null
+        },
+        {
           "number": 61,
           "title": "모바일 최적화 요청",
           "category": "버그",
