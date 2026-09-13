@@ -8,6 +8,19 @@
       "url": "https://skill.mapleland.st",
       "issues": [
         {
+          "number": 20,
+          "title": "메이플랜드 버전으로 스킬공격력 변환부탁드립니다",
+          "category": "버그",
+          "state": "open",
+          "labels": [
+            "feedback"
+          ],
+          "createdAt": "2026-09-13T16:33:57Z",
+          "closedAt": null,
+          "url": "https://github.com/kyhong222/ms-skill-simulator/issues/20",
+          "reply": null
+        },
+        {
           "number": 12,
           "title": "캡틴 속강 1만 찍어도 결빙 +2초 되어있습니다",
           "category": "버그",
