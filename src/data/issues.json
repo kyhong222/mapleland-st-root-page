@@ -117,6 +117,33 @@
       "url": "https://item.mapleland.st",
       "issues": [
         {
+          "number": 80,
+          "title": "표기 데미지 = 스공 ?",
+          "category": "버그",
+          "state": "open",
+          "labels": [
+            "user-feedback"
+          ],
+          "createdAt": "2026-09-17T12:02:37Z",
+          "closedAt": null,
+          "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/80",
+          "reply": null
+        },
+        {
+          "number": 78,
+          "title": "용천권 요구 dex 없음",
+          "category": "버그",
+          "state": "closed",
+          "labels": [
+            "user-feedback",
+            "버그"
+          ],
+          "createdAt": "2026-09-17T06:49:53Z",
+          "closedAt": "2026-09-17T11:40:29Z",
+          "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/78",
+          "reply": "79 해결"
+        },
+        {
           "number": 77,
           "title": "세팅 완료후 최종 스공은 어디에 표기가 되나요 ?",
           "category": "기타",
