@@ -130,15 +130,80 @@
       "url": "https://item.mapleland.st",
       "issues": [
         {
+          "number": 95,
+          "title": "\"다른 기기에서 더 새 버전으로 저장했습니다\" 메시지가 지속적으로 노출됨",
+          "category": "버그",
+          "state": "closed",
+          "labels": [
+            "버그"
+          ],
+          "createdAt": "2026-09-21T08:04:43Z",
+          "closedAt": "2026-09-21T08:25:10Z",
+          "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/95",
+          "reply": "원인 확인됨 — 코드 버그 아님. MSGTOONEW(\"다른 기기에서 더 새 버전으로...\")는 클라이언트의 CLOUDSCHEMAVERSION이 서버에 저장된 schemaversion보다 낮을 때 뜨는 안전장치다(src/store/cloudSchema.ts:24, src/data/cloud/sync.ts:225-228).…"
+        },
+        {
+          "number": 94,
+          "title": "아이템 세팅 공유용 캡쳐/이미지 내보내기 기능",
+          "category": "건의",
+          "state": "open",
+          "labels": [
+            "건의"
+          ],
+          "createdAt": "2026-09-21T08:04:29Z",
+          "closedAt": null,
+          "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/94",
+          "reply": null
+        },
+        {
+          "number": 93,
+          "title": "속성추가피해%(냉기/화염/번개/독/무속성) 옵션이 데미지 계산에 반영되지 않음",
+          "category": "기타",
+          "state": "open",
+          "labels": [
+            "건의"
+          ],
+          "createdAt": "2026-09-21T08:04:16Z",
+          "closedAt": null,
+          "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/93",
+          "reply": null
+        },
+        {
+          "number": 92,
+          "title": "배틀메이지 스킬/버프/장비 데이터 추가 + 레볼루션 스태프(1382101) 반영",
+          "category": "기타",
+          "state": "open",
+          "labels": [
+            "건의"
+          ],
+          "createdAt": "2026-09-21T08:04:01Z",
+          "closedAt": null,
+          "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/92",
+          "reply": null
+        },
+        {
+          "number": 91,
+          "title": "부메랑 스탭·드래곤스트라이크·피스트·데몰리션·스내치 공속 데이터 보완",
+          "category": "기타",
+          "state": "open",
+          "labels": [
+            "버그"
+          ],
+          "createdAt": "2026-09-21T08:03:46Z",
+          "closedAt": null,
+          "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/91",
+          "reply": null
+        },
+        {
           "number": 80,
           "title": "표기 데미지 = 스공 ?",
           "category": "버그",
-          "state": "open",
+          "state": "closed",
           "labels": [
             "user-feedback"
           ],
           "createdAt": "2026-09-17T12:02:37Z",
-          "closedAt": null,
+          "closedAt": "2026-09-21T07:14:46Z",
           "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/80",
           "reply": "인게임 스공이랑 표기데미지가 차이가 난다면 세팅이 정확하게 되지 않았을 수 있습니다. 혹시 나로 유저시라면 표창을 등록하셨는지 확인 부탁드리며, 차이가 더 있을경우 이미지를 제공해주시면 도움드릴수 있을 것 같습니다."
         },
@@ -394,13 +459,13 @@
           "number": 31,
           "title": "망수대 피격 / 마공 데미지 실제랑 달라요",
           "category": "버그",
-          "state": "open",
+          "state": "closed",
           "labels": [
             "user-feedback",
             "버그"
           ],
           "createdAt": "2026-08-20T04:16:16Z",
-          "closedAt": null,
+          "closedAt": "2026-09-21T07:14:56Z",
           "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/31",
           "reply": "어떻게 다른지 구체적으로 남겨주시면 검토해보겠습니다.."
         },
