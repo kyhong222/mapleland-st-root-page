@@ -8,6 +8,19 @@
       "url": "https://skill.mapleland.st",
       "issues": [
         {
+          "number": 23,
+          "title": "캡틴 래피드 파이어 데미지",
+          "category": "버그",
+          "state": "open",
+          "labels": [
+            "feedback"
+          ],
+          "createdAt": "2026-09-27T06:09:35Z",
+          "closedAt": null,
+          "url": "https://github.com/kyhong222/ms-skill-simulator/issues/23",
+          "reply": null
+        },
+        {
           "number": 22,
           "title": "아란 만들어 주면 안될까나요",
           "category": "기타",
