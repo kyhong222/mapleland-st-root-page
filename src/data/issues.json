@@ -873,34 +873,6 @@
           "closedAt": "2026-07-23T10:38:53Z",
           "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/3",
           "reply": "카테/카티나스 업횟 10으로 수정 추가로 야구방망이 2종에 업횟누락된것 수정"
-        },
-        {
-          "number": 2,
-          "title": "신발에 주문서 사용 시 이동관련 옵션의 스탯 계산이 이루어지지 않는 이슈.",
-          "category": "버그",
-          "state": "closed",
-          "labels": [
-            "user-feedback",
-            "버그"
-          ],
-          "createdAt": "2026-07-23T03:27:45Z",
-          "closedAt": "2026-07-23T06:02:32Z",
-          "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/2",
-          "reply": "75e6d8f89bd0d4c2929299e3c0b2e7bd35031454 커밋 해결완"
-        },
-        {
-          "number": 1,
-          "title": "테스트 제보",
-          "category": "버그",
-          "state": "closed",
-          "labels": [
-            "user-feedback",
-            "버그"
-          ],
-          "createdAt": "2026-07-22T13:33:48Z",
-          "closedAt": "2026-07-23T06:02:37Z",
-          "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/1",
-          "reply": null
         }
       ]
     },
