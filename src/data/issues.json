@@ -831,48 +831,6 @@
           "closedAt": "2026-07-31T01:42:49Z",
           "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/6",
           "reply": "부캐 시나리오를 고려해서 인벤토리를 공유하도록 해뒀는데 아이템이 좀 난잡해지는듯 카테고리 별 정렬을 지원하는 방향으로 처리"
-        },
-        {
-          "number": 5,
-          "title": "레드 카테에 스텟제한이 없어요",
-          "category": "버그",
-          "state": "closed",
-          "labels": [
-            "user-feedback",
-            "버그"
-          ],
-          "createdAt": "2026-07-25T13:44:01Z",
-          "closedAt": "2026-07-25T14:55:48Z",
-          "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/5",
-          "reply": "카테/카티나스 8종 모두 수정"
-        },
-        {
-          "number": 4,
-          "title": "파워가드 문의 드립니다",
-          "category": "기타",
-          "state": "closed",
-          "labels": [
-            "user-feedback",
-            "기타"
-          ],
-          "createdAt": "2026-07-23T12:57:22Z",
-          "closedAt": "2026-07-23T14:50:29Z",
-          "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/4",
-          "reply": "적용되고있었으나, 보스반감 안내가 없었던것으로 확인됨. 설명 추가 완료"
-        },
-        {
-          "number": 3,
-          "title": "카테/카티나스 업횟이 잘못 설정됨",
-          "category": "버그",
-          "state": "closed",
-          "labels": [
-            "user-feedback",
-            "버그"
-          ],
-          "createdAt": "2026-07-23T09:57:20Z",
-          "closedAt": "2026-07-23T10:38:53Z",
-          "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/3",
-          "reply": "카테/카티나스 업횟 10으로 수정 추가로 야구방망이 2종에 업횟누락된것 수정"
         }
       ]
     },
