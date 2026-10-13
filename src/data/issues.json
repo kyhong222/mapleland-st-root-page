@@ -8,6 +8,19 @@
       "url": "https://skill.mapleland.st",
       "issues": [
         {
+          "number": 24,
+          "title": "말레이시아 보스 투구 템세팅에 넣어주세요",
+          "category": "건의",
+          "state": "open",
+          "labels": [
+            "feedback"
+          ],
+          "createdAt": "2026-10-13T08:53:16Z",
+          "closedAt": null,
+          "url": "https://github.com/kyhong222/ms-skill-simulator/issues/24",
+          "reply": null
+        },
+        {
           "number": 23,
           "title": "캡틴 래피드 파이어 데미지",
           "category": "버그",
