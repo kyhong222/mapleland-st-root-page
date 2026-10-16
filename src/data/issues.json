@@ -812,20 +812,6 @@
           "closedAt": "2026-08-05T13:44:42Z",
           "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/10",
           "reply": "완료"
-        },
-        {
-          "number": 9,
-          "title": "아이템 도핑 이유식 및 스트라이커 특화 버프 퀵모션 누락의 건",
-          "category": "건의",
-          "state": "closed",
-          "labels": [
-            "user-feedback",
-            "건의"
-          ],
-          "createdAt": "2026-08-04T03:59:15Z",
-          "closedAt": "2026-08-05T12:27:56Z",
-          "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/9",
-          "reply": "완료"
         }
       ]
     },
