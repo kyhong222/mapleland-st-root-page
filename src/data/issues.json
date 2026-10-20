@@ -770,48 +770,6 @@
           "closedAt": "2026-08-05T13:45:15Z",
           "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/13",
           "reply": "완료"
-        },
-        {
-          "number": 12,
-          "title": "몬스터 목록 추가 건의",
-          "category": "건의",
-          "state": "closed",
-          "labels": [
-            "user-feedback",
-            "건의"
-          ],
-          "createdAt": "2026-08-05T05:12:39Z",
-          "closedAt": "2026-08-05T13:44:54Z",
-          "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/12",
-          "reply": "완료"
-        },
-        {
-          "number": 11,
-          "title": "남자목욕타올 스탯 문제",
-          "category": "버그",
-          "state": "closed",
-          "labels": [
-            "user-feedback",
-            "버그"
-          ],
-          "createdAt": "2026-08-05T05:09:31Z",
-          "closedAt": "2026-08-05T13:44:48Z",
-          "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/11",
-          "reply": "완료"
-        },
-        {
-          "number": 10,
-          "title": "훈장 종류 추가 건의",
-          "category": "기타",
-          "state": "closed",
-          "labels": [
-            "user-feedback",
-            "기타"
-          ],
-          "createdAt": "2026-08-05T05:03:41Z",
-          "closedAt": "2026-08-05T13:44:42Z",
-          "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/10",
-          "reply": "완료"
         }
       ]
     },
