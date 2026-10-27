@@ -700,62 +700,6 @@
           "closedAt": "2026-08-10T09:35:12Z",
           "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/18",
           "reply": "시그너스 상수에 16이 추가되어있어서 오류나있음을 확인. 픽스완"
-        },
-        {
-          "number": 17,
-          "title": "드래곤펄스+피어싱",
-          "category": "건의",
-          "state": "closed",
-          "labels": [
-            "user-feedback",
-            "건의"
-          ],
-          "createdAt": "2026-08-07T02:40:59Z",
-          "closedAt": "2026-08-11T10:13:02Z",
-          "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/17",
-          "reply": "완료"
-        },
-        {
-          "number": 16,
-          "title": "레벨업 장비 +수치 적용 오류",
-          "category": "버그",
-          "state": "closed",
-          "labels": [
-            "user-feedback",
-            "버그"
-          ],
-          "createdAt": "2026-08-06T06:13:21Z",
-          "closedAt": "2026-08-06T07:09:51Z",
-          "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/16",
-          "reply": "완료"
-        },
-        {
-          "number": 15,
-          "title": "히어로 브랜디쉬 대미지 오류",
-          "category": "건의",
-          "state": "closed",
-          "labels": [
-            "user-feedback",
-            "건의"
-          ],
-          "createdAt": "2026-08-05T23:52:42Z",
-          "closedAt": "2026-08-06T08:10:13Z",
-          "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/15",
-          "reply": "1레벨 135 2레벨 140 3레벨 145 4레벨 150 5레벨 155 6레벨 160 7레벨 165 8레벨 170 9레벨 175 10레벨 180 11레벨 184 12레벨 188 13레벨 192 14레벨 196 15레벨 200 16레벨 204 17레벨 208 18레벨 212 19레벨 216 20레벨 220 21레벨 225…"
-        },
-        {
-          "number": 14,
-          "title": "신궁 스나이핑 오류",
-          "category": "버그",
-          "state": "closed",
-          "labels": [
-            "user-feedback",
-            "버그"
-          ],
-          "createdAt": "2026-08-05T12:44:43Z",
-          "closedAt": "2026-08-14T06:32:25Z",
-          "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/14",
-          "reply": "해결 완료"
         }
       ]
     },
