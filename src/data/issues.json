@@ -588,34 +588,6 @@
           "closedAt": "2026-08-15T04:43:10Z",
           "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/26",
           "reply": "되는디..? 어떤 상황에서 안되는지 확인 필요"
-        },
-        {
-          "number": 25,
-          "title": "소울마스터 스킬관련",
-          "category": "건의",
-          "state": "closed",
-          "labels": [
-            "user-feedback",
-            "건의"
-          ],
-          "createdAt": "2026-08-13T14:48:19Z",
-          "closedAt": "2026-08-14T02:34:16Z",
-          "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/25",
-          "reply": "무기 장착시 나타나지만, default로 나타나도록 수정"
-        },
-        {
-          "number": 24,
-          "title": "갑자기 스공이 안맞아요",
-          "category": "기타",
-          "state": "closed",
-          "labels": [
-            "user-feedback",
-            "기타"
-          ],
-          "createdAt": "2026-08-13T05:26:01Z",
-          "closedAt": "2026-08-13T09:03:36Z",
-          "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/24",
-          "reply": "이건 사진이 있어야 해결되는데.."
         }
       ]
     },
