@@ -518,20 +518,6 @@
           "closedAt": "2026-09-21T07:14:56Z",
           "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/31",
           "reply": "어떻게 다른지 구체적으로 남겨주시면 검토해보겠습니다.."
-        },
-        {
-          "number": 30,
-          "title": "앰플리피케이션 40퍼 증가가 아니라 150퍼 증가에요",
-          "category": "버그",
-          "state": "closed",
-          "labels": [
-            "user-feedback",
-            "버그"
-          ],
-          "createdAt": "2026-08-20T02:13:02Z",
-          "closedAt": "2026-08-24T12:21:06Z",
-          "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/30",
-          "reply": "스킬 정보는 일단 마스터 레벨 기준으로만 패치하기 어려운 점이 있어서, 스킬정보를 받은다음 패치하려고 최대한 노력하고는 있습니다. 다만, 제가 모든캐릭을 충분히 키우고 있는게 아닌지라 스킬정보를 취득하는데 어려움이 있는것도 사실입니다.. 자주쓰이는 마스터 레벨만 변경하고 추가 취합을 할지는 조금 더 고민해보겠습니다. 혹…"
         }
       ]
     },
