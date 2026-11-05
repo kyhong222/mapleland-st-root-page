@@ -209,12 +209,12 @@
           "number": 93,
           "title": "속성추가피해%(냉기/화염/번개/독/무속성) 옵션이 데미지 계산에 반영되지 않음",
           "category": "기타",
-          "state": "open",
+          "state": "closed",
           "labels": [
             "건의"
           ],
           "createdAt": "2026-09-21T08:04:16Z",
-          "closedAt": null,
+          "closedAt": "2026-11-04T23:24:14Z",
           "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/93",
           "reply": null
         },
@@ -222,12 +222,12 @@
           "number": 92,
           "title": "배틀메이지 스킬/버프/장비 데이터 추가 + 레볼루션 스태프(1382101) 반영",
           "category": "기타",
-          "state": "open",
+          "state": "closed",
           "labels": [
             "건의"
           ],
           "createdAt": "2026-09-21T08:04:01Z",
-          "closedAt": null,
+          "closedAt": "2026-11-04T23:24:32Z",
           "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/92",
           "reply": null
         },
@@ -329,13 +329,13 @@
           "number": 61,
           "title": "모바일 최적화 요청",
           "category": "버그",
-          "state": "open",
+          "state": "closed",
           "labels": [
             "user-feedback",
             "버그"
           ],
           "createdAt": "2026-09-08T04:09:57Z",
-          "closedAt": null,
+          "closedAt": "2026-11-04T23:24:23Z",
           "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/61",
           "reply": null
         },
@@ -477,47 +477,6 @@
           "closedAt": "2026-09-11T12:47:04Z",
           "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/35",
           "reply": "추가됨"
-        },
-        {
-          "number": 34,
-          "title": "제네시스 남둥 n방컷 수치가 이상한듯합니다",
-          "category": "버그",
-          "state": "closed",
-          "labels": [
-            "user-feedback"
-          ],
-          "createdAt": "2026-08-25T01:39:07Z",
-          "closedAt": "2026-08-25T11:43:25Z",
-          "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/34",
-          "reply": "아, 제네/메테오/블리자드는 숙련도가 고정이라 스킬데이터에 숙련도필드가 아예 없어서 마법 숙련도가 작동 안하고있었네요 적용하겠습니다."
-        },
-        {
-          "number": 33,
-          "title": "앰플 마스터 데미지 오류",
-          "category": "버그",
-          "state": "closed",
-          "labels": [
-            "user-feedback",
-            "버그"
-          ],
-          "createdAt": "2026-08-23T14:26:53Z",
-          "closedAt": "2026-08-24T12:20:59Z",
-          "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/33",
-          "reply": "스킬 정보는 일단 마스터 레벨 기준으로만 패치하기 어려운 점이 있어서, 스킬정보를 받은다음 패치하려고 최대한 노력하고는 있습니다. 다만, 제가 모든캐릭을 충분히 키우고 있는게 아닌지라 스킬정보를 취득하는데 어려움이 있는것도 사실입니다.. 자주쓰이는 마스터 레벨만 변경하고 추가 취합을 할지는 조금 더 고민해보겠습니다. 혹…"
-        },
-        {
-          "number": 31,
-          "title": "망수대 피격 / 마공 데미지 실제랑 달라요",
-          "category": "버그",
-          "state": "closed",
-          "labels": [
-            "user-feedback",
-            "버그"
-          ],
-          "createdAt": "2026-08-20T04:16:16Z",
-          "closedAt": "2026-09-21T07:14:56Z",
-          "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/31",
-          "reply": "어떻게 다른지 구체적으로 남겨주시면 검토해보겠습니다.."
         }
       ]
     },
