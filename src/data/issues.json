@@ -172,10 +172,10 @@
           "number": 108,
           "title": "베놈 추가",
           "category": null,
-          "state": "open",
+          "state": "closed",
           "labels": [],
           "createdAt": "2026-10-11T12:22:39Z",
-          "closedAt": null,
+          "closedAt": "2026-11-06T02:45:26Z",
           "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/108",
           "reply": null
         },
@@ -450,33 +450,6 @@
           "closedAt": "2026-08-28T03:30:04Z",
           "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/39",
           "reply": null
-        },
-        {
-          "number": 38,
-          "title": "스공이 안맞아요",
-          "category": "기타",
-          "state": "closed",
-          "labels": [
-            "user-feedback",
-            "기타"
-          ],
-          "createdAt": "2026-08-27T08:02:23Z",
-          "closedAt": "2026-08-28T03:30:03Z",
-          "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/38",
-          "reply": null
-        },
-        {
-          "number": 35,
-          "title": "체력HP 표기",
-          "category": "건의",
-          "state": "closed",
-          "labels": [
-            "user-feedback"
-          ],
-          "createdAt": "2026-08-25T04:38:28Z",
-          "closedAt": "2026-09-11T12:47:04Z",
-          "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/35",
-          "reply": "추가됨"
         }
       ]
     },
