@@ -422,20 +422,6 @@
           "closedAt": "2026-08-31T03:30:56Z",
           "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/46",
           "reply": "메용 우클릭시 수정 가능하십니다."
-        },
-        {
-          "number": 43,
-          "title": "메용20",
-          "category": "기타",
-          "state": "closed",
-          "labels": [
-            "user-feedback",
-            "기타"
-          ],
-          "createdAt": "2026-08-29T12:43:12Z",
-          "closedAt": "2026-08-29T14:05:07Z",
-          "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/43",
-          "reply": "메용 우클릭하시면 레벨조정 가능하십니다."
         }
       ]
     },
