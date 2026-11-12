@@ -24,12 +24,12 @@
           "number": 24,
           "title": "말레이시아 보스 투구 템세팅에 넣어주세요",
           "category": "건의",
-          "state": "open",
+          "state": "closed",
           "labels": [
             "feedback"
           ],
           "createdAt": "2026-10-13T08:53:16Z",
-          "closedAt": null,
+          "closedAt": "2026-11-12T01:59:37Z",
           "url": "https://github.com/kyhong222/ms-skill-simulator/issues/24",
           "reply": null
         },
@@ -168,6 +168,28 @@
       "repo": "kyhong222/mapleland-setting-v2",
       "url": "https://item.mapleland.st",
       "issues": [
+        {
+          "number": 145,
+          "title": "켄타 파티퀘스트 피아누스 몬스터",
+          "category": null,
+          "state": "open",
+          "labels": [],
+          "createdAt": "2026-11-12T02:00:25Z",
+          "closedAt": null,
+          "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/145",
+          "reply": null
+        },
+        {
+          "number": 144,
+          "title": "매직가드 사용 중 피격 시 MP소모량도 표기",
+          "category": null,
+          "state": "open",
+          "labels": [],
+          "createdAt": "2026-11-12T02:00:10Z",
+          "closedAt": null,
+          "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/144",
+          "reply": null
+        },
         {
           "number": 108,
           "title": "베놈 추가",
@@ -380,48 +402,6 @@
           "closedAt": "2026-09-05T08:15:49Z",
           "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/51",
           "reply": "지금 maplestory.io 서버가 맛이 가서 그렇습니다 추이를 지켜보고 데이터셋을 옮기던가 하겠습니다"
-        },
-        {
-          "number": 48,
-          "title": "부메랑스텝 공속 관련 오류",
-          "category": "버그",
-          "state": "open",
-          "labels": [
-            "user-feedback",
-            "버그"
-          ],
-          "createdAt": "2026-09-03T13:52:44Z",
-          "closedAt": null,
-          "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/48",
-          "reply": "부스는 옛메랑 메랜이랑 공속이 달라져서(정확히는 후딜이 없어져서) 차이가 있습니다. 데이터를 얻어서 수정하겠습니다."
-        },
-        {
-          "number": 47,
-          "title": "글잘못적었는데 삭제되나요??",
-          "category": "건의",
-          "state": "closed",
-          "labels": [
-            "user-feedback",
-            "건의"
-          ],
-          "createdAt": "2026-08-30T16:53:23Z",
-          "closedAt": "2026-08-31T03:31:32Z",
-          "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/47",
-          "reply": null
-        },
-        {
-          "number": 46,
-          "title": "공통 버프기능에 메용 20도 추가해주실 수 있나요??",
-          "category": "건의",
-          "state": "closed",
-          "labels": [
-            "user-feedback",
-            "건의"
-          ],
-          "createdAt": "2026-08-30T15:36:07Z",
-          "closedAt": "2026-08-31T03:30:56Z",
-          "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/46",
-          "reply": "메용 우클릭시 수정 가능하십니다."
         }
       ]
     },
