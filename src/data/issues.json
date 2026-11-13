@@ -374,34 +374,6 @@
           "closedAt": "2026-09-11T02:28:38Z",
           "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/58",
           "reply": "정상적으로 작동하는것으로 보임."
-        },
-        {
-          "number": 52,
-          "title": "퀘스리 훈장 추가 해주세요",
-          "category": "건의",
-          "state": "closed",
-          "labels": [
-            "user-feedback",
-            "건의"
-          ],
-          "createdAt": "2026-09-05T08:35:15Z",
-          "closedAt": "2026-09-05T10:14:53Z",
-          "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/52",
-          "reply": "이메일은 지워드렸습니다"
-        },
-        {
-          "number": 51,
-          "title": "아이템 이미지들이 다 안보이고, 흰색 화면으로 깨져보여요!",
-          "category": "버그",
-          "state": "closed",
-          "labels": [
-            "user-feedback",
-            "버그"
-          ],
-          "createdAt": "2026-09-04T21:51:20Z",
-          "closedAt": "2026-09-05T08:15:49Z",
-          "url": "https://github.com/kyhong222/mapleland-setting-v2/issues/51",
-          "reply": "지금 maplestory.io 서버가 맛이 가서 그렇습니다 추이를 지켜보고 데이터셋을 옮기던가 하겠습니다"
         }
       ]
     },
@@ -421,7 +393,7 @@
           "createdAt": "2026-08-14T17:53:42Z",
           "closedAt": "2026-08-16T05:53:33Z",
           "url": "https://github.com/kyhong222/mapleland-coin-calculator/issues/2",
-          "reply": "완료"
+          "reply": null
         }
       ]
     }
